@@ -155,7 +155,8 @@
     text-decoration: none;
 }
 
-.link > p {
+.link > span {
+    display: block;
     font-size: smaller;
     line-height: normal;
     font-weight: 300;
