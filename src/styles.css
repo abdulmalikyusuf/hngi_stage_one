@@ -30,7 +30,7 @@
 @media screen and (min-width: 1025px) {
     #main__section {
         background-color: white;
-        padding: 64px 112px 0px;
+        /* padding: 64px 112px 0px; */
     }
     #main__contents {
         padding: 0 32px;
