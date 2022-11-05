@@ -11,9 +11,9 @@ function Home() {
                 <div id="profile__section" className="flex flex-col justify-center items-center">
                     <div id="profile__DP" className="relative flex flex-col justify-center items-center group">
                         <a href="" id="image__link" className="focus:border-[5.5px] border-[#EBE9FE] rounded-full">
-                            <img src={ProfilePhoto} alt="Profile photo" className="profile__img "/>
+                            <img src={ProfilePhoto} alt="Profile photo" className="profile__img"/>
+                        <span className="absolute inset-0 rounded-full hover:profile__photo__background"/>
                         </a>
-                        <div className="absolute inset-0 rounded-full profile__photo__background"/>
                         <div id="choose__profile" className="group-hover:block hidden bottom-2 absolute">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M2 8.37722C2 8.0269 2 7.85174 2.01462 7.70421C2.1556 6.28127 3.28127 5.1556 4.70421 5.01462C4.85174 5 5.03636 5 5.40558 5C5.54785 5 5.61899 5 5.67939 4.99634C6.45061 4.94963 7.12595 4.46288 7.41414 3.746C7.43671 3.68986 7.45781 3.62657 7.5 3.5C7.54219 3.37343 7.56329 3.31014 7.58586 3.254C7.87405 2.53712 8.54939 2.05037 9.32061 2.00366C9.38101 2 9.44772 2 9.58114 2H14.4189C14.5523 2 14.619 2 14.6794 2.00366C15.4506 2.05037 16.126 2.53712 16.4141 3.254C16.4367 3.31014 16.4578 3.37343 16.5 3.5C16.5422 3.62657 16.5633 3.68986 16.5859 3.746C16.874 4.46288 17.5494 4.94963 18.3206 4.99634C18.381 5 18.4521 5 18.5944 5C18.9636 5 19.1483 5 19.2958 5.01462C20.7187 5.1556 21.8444 6.28127 21.9854 7.70421C22 7.85174 22 8.0269 22 8.37722V16.2C22 17.8802 22 18.7202 21.673 19.362C21.3854 19.9265 20.9265 20.3854 20.362 20.673C19.7202 21 18.8802 21 17.2 21H6.8C5.11984 21 4.27976 21 3.63803 20.673C3.07354 20.3854 2.6146 19.9265 2.32698 19.362C2 18.7202 2 17.8802 2 16.2V8.37722Z" stroke="#F9FAFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -35,23 +35,23 @@ function Home() {
             </div>
             <div id="link_section" className="mt-3 sm:mt-9">
                 {/* <a href="https://training.zuri.team/" id='btn__zuri' className="link">Twitter Link</a> */}
-                <a href="https://training.zuri.team/" id='btn__zuri' className="py-[25px] border border-custom-gray-200 rounded-[8px] flex flex-col items-center justify-center text-custom-gray-900 text-xl leading-[28px] font-medium bg-custom-gray-200 mb-6">Zuri Team</a>
-                <a href="http://books.zuri.team/" id='books' className="py-[25px] border border-custom-gray-200 rounded-[8px] flex flex-col items-center justify-center text-custom-gray-900 text-xl leading-[28px] font-medium bg-custom-gray-200 mb-6">
+                <a href="https://training.zuri.team/" id='btn__zuri' className="py-[25px] border border-custom-gray-200 rounded-[8px] flex flex-col items-center justify-center text-custom-gray-900 text-lg text-center px-8 font-medium bg-custom-gray-200 mb-6">Zuri Team</a>
+                <a href="http://books.zuri.team/" id='books' className="py-[25px] border border-custom-gray-200 rounded-[8px] flex flex-col items-center justify-center text-custom-gray-900 text-lg text-center px-8 font-medium bg-custom-gray-200 mb-6">
                     Zuri Books
                     <span className="block font-light text-sm text-center">Have a knack for design? Check out our awesome collection of books on design principles.</span>
                 </a>
-                <a href="https://books.zuri.team/python-for-beginners?ref_id=ymabdul" id="book__python" className="py-[25px] border border-custom-gray-200 rounded-[8px] flex flex-col items-center justify-center text-custom-gray-900 text-xl leading-[28px] font-medium bg-custom-gray-200 mb-6">
+                <a href="https://books.zuri.team/python-for-beginners?ref_id=ymabdul" id="book__python" className="py-[25px] border border-custom-gray-200 rounded-[8px] flex flex-col items-center justify-center text-custom-gray-900 text-lg text-center px-8 font-medium bg-custom-gray-200 mb-6">
                     Invent Your Own Computer Games with Python, 4th edition
                     <span className="block font-light text-sm text-center">If games are your thing, or you even have a game idea of your own, this would be the perfect book to learn Python. In this book, you learn the fundamentals of programming and Python with the application exercises focused on building classic games.</span>
                 </a>
-                <a href="https://background.zuri.team" id="pitch" className="py-[25px] border border-custom-gray-200 rounded-[8px] flex flex-col items-center justify-center text-custom-gray-900 text-xl leading-[28px] font-medium bg-custom-gray-200 mb-6">Background Check for Coders
+                <a href="https://background.zuri.team" id="pitch" className="py-[25px] border border-custom-gray-200 rounded-[8px] flex flex-col items-center justify-center text-custom-gray-900 text-lg text-center px-8 font-medium bg-custom-gray-200 mb-6">Background Check for Coders
                     <span className="block font-light text-sm text-center">Want to know what type of developer you're hiring? We can help with that</span>
                 </a>
-                <a href="https://books.zuri.team/design-rules" id='book__design' className="py-[25px] border border-custom-gray-200 rounded-[8px] flex flex-col items-center justify-center text-custom-gray-900 text-xl leading-[28px] font-medium bg-custom-gray-200 mb-6">
+                <a href="https://books.zuri.team/design-rules" id='book__design' className="py-[25px] border border-custom-gray-200 rounded-[8px] flex flex-col items-center justify-center text-custom-gray-900 text-lg text-center px-8 font-medium bg-custom-gray-200 mb-6">
                     Design Rules
                     <span className="block font-light text-sm text-center">Learn about the 12 principles of design from our best seller</span>
                 </a>
-                <Link id="contact" to="/contact" className="py-[25px] border border-custom-gray-200 rounded-[8px] flex flex-col items-center justify-center text-custom-gray-900 text-xl leading-[28px] font-medium bg-custom-gray-200 mb-6">
+                <Link id="contact" to="/contact" className="py-[25px] border border-custom-gray-200 rounded-[8px] flex flex-col items-center justify-center text-custom-gray-900 text-lg text-center px-8 font-medium bg-custom-gray-200 mb-6">
                     Contact
                 </Link>
             </div>

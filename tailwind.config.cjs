@@ -25,7 +25,10 @@ module.exports = {
     plugin(function ({ addUtilities }) {
 			addUtilities({
         ".profile__photo__background": {
-          background: '#F9FAFB'
+          background: 'linear-gradient(0deg, rgba(52, 64, 84, 0.75), rgba(52, 64, 84, 0.75))',
+            // background: '#F9FAFB',
+            // 'mix-blend-mode': 'multiply'
+            'background-blend-mode': 'overlay'
         },
 				".share__btn": {
           height: '40px',
@@ -73,7 +76,7 @@ module.exports = {
           "&:focus": {
             border: '1px solid #84CAFF',
             'box-shadow': '0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #D1E9FF',
-            
+
             "&:invalid": {
               border: '1px solid #F89687',
               'box-shadow': '0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #FFD3CC'

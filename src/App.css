@@ -910,6 +910,11 @@ select{
   padding-right: 1rem;
 }
 
+.px-8{
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .pt-16{
   padding-top: 4rem;
 }
@@ -938,6 +943,11 @@ select{
 
 .text-\[20px\]{
   font-size: 20px;
+}
+
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .font-semibold{
@@ -988,7 +998,8 @@ select{
 }
 
 .profile__photo__background{
-  background: #F9FAFB;
+  background: linear-gradient(0deg, rgba(52, 64, 84, 0.75), rgba(52, 64, 84, 0.75));
+  background-blend-mode: overlay;
 }
 
 .share__btn{
@@ -1108,6 +1119,11 @@ select{
 .hover\:bg-custom-gray-50:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+
+.hover\:profile__photo__background:hover{
+  background: linear-gradient(0deg, rgba(52, 64, 84, 0.75), rgba(52, 64, 84, 0.75));
+  background-blend-mode: overlay;
 }
 
 .focus\:border-\[5\.5px\]:focus{
