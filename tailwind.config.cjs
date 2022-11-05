@@ -24,6 +24,9 @@ module.exports = {
     require('@tailwindcss/forms'),
     plugin(function ({ addUtilities }) {
 			addUtilities({
+        ".profile__photo__background": {
+          background: '#F9FAFB'
+        },
 				".share__btn": {
           height: '40px',
           width: '40px',
@@ -48,7 +51,7 @@ module.exports = {
             border: '1px dashed var(--gray-200)',
           }
         },
-        ".input__field":{
+        ".form__field":{
           padding: '10px 14px',
           width: '100%',
           // height: '44px',
@@ -56,6 +59,26 @@ module.exports = {
           border: '1px solid #D0D5DD',
           'box-shadow': '0px 1px 2px rgba(16, 24, 40, 0.05)',
           'border-radius': '8px',
+          
+          "&:focus": {
+            border: '1px solid #84CAFF',
+            'box-shadow': '0px 1px 2px rgba(16, 24, 40, 0.05)'
+          },
+          "&:invalid": {
+            border: '1px solid #F89687',
+            'box-shadow': '0px 1px 2px rgba(16, 24, 40, 0.05)'
+          }
+        },
+        ".message__field": {
+          "&:focus": {
+            border: '1px solid #84CAFF',
+            'box-shadow': '0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #D1E9FF',
+            
+            "&:invalid": {
+              border: '1px solid #F89687',
+              'box-shadow': '0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #FFD3CC'
+            },
+          },
         },
         ".submit__btn": {
           'margin-top': '34px',
@@ -72,8 +95,34 @@ module.exports = {
           'box-shadow': '0px 1px 2px rgba(16, 24, 40, 0.05)',
           'border-radius': '8px',
           color: 'white',
-          'font-weight': '700'
-        }
+          'font-weight': '700',
+
+          "&:hover": {
+            background: '#175CD3',
+            border: '1px solid #175CD3'
+          },
+          "&:disabled": {
+            background: '#B2DDFF',
+            border: '1px solid #B2DDFF'
+          },
+          "&:focus": {
+            'box-shadow': '0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #D1E9FF',
+          },
+        },
+        ".checkbox__field": {
+          background: '#FFFFFF',
+          border: '1px solid #D0D5DD',
+          'border-radius': '6px',
+
+          "&:focus": {
+            border: '1px solid #84CAFF',
+            'box-shadow': '0px 0px 0px 4px #D1E9FF',
+          },
+          "&:disabled": {
+            background: '#F2F4F7',
+            border: '1px solid #D0D5DD'
+          },
+        },
       })
     })
   ],

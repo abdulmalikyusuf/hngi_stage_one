@@ -678,22 +678,37 @@ select{
   --tw-backdrop-sepia:  ;
 }
 
+.absolute{
+  position: absolute;
+}
+
 .relative{
   position: relative;
+}
+
+.inset-0{
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.bottom-2{
+  bottom: 0.5rem;
 }
 
 .col-span-full{
   grid-column: 1 / -1;
 }
 
-.mx-8{
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
+}
+
+.mx-8{
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .mt-5{
@@ -706,6 +721,10 @@ select{
 
 .mb-\[6px\]{
   margin-bottom: 6px;
+}
+
+.mt-\[6px\]{
+  margin-top: 6px;
 }
 
 .mt-6{
@@ -726,6 +745,10 @@ select{
 
 .mt-16{
   margin-top: 4rem;
+}
+
+.mb-8{
+  margin-bottom: 2rem;
 }
 
 .block{
@@ -750,6 +773,10 @@ select{
 
 .h-10{
   height: 2.5rem;
+}
+
+.h-6{
+  height: 1.5rem;
 }
 
 .w-5{
@@ -785,10 +812,6 @@ select{
   justify-content: center;
 }
 
-.justify-between{
-  justify-content: space-between;
-}
-
 .gap-6{
   gap: 1.5rem;
 }
@@ -799,16 +822,10 @@ select{
   margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.space-y-4 > :not([hidden]) ~ :not([hidden]){
+.space-y-\[16px\] > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
-  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
-}
-
-.space-y-8 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-y-reverse: 0;
-  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+  margin-top: calc(16px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(16px * var(--tw-space-y-reverse));
 }
 
 .rounded-\[6px\]{
@@ -859,11 +876,6 @@ select{
   border-color: rgb(234 236 240 / var(--tw-border-opacity));
 }
 
-.border-black{
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
-}
-
 .bg-custom-gray-200{
   --tw-bg-opacity: 1;
   background-color: rgb(234 236 240 / var(--tw-bg-opacity));
@@ -881,11 +893,6 @@ select{
 .object-contain{
   -o-object-fit: contain;
      object-fit: contain;
-}
-
-.object-cover{
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .py-\[25px\]{
@@ -933,11 +940,6 @@ select{
   font-size: 20px;
 }
 
-.text-lg{
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
 .font-semibold{
   font-weight: 600;
 }
@@ -966,10 +968,6 @@ select{
   line-height: 28px;
 }
 
-.leading-\[24px\]{
-  line-height: 24px;
-}
-
 .tracking-\[-0\.02em\]{
   letter-spacing: -0.02em;
 }
@@ -979,9 +977,18 @@ select{
   color: rgb(16 24 40 / var(--tw-text-opacity));
 }
 
+.text-\[\#F83F23\]{
+  --tw-text-opacity: 1;
+  color: rgb(248 63 35 / var(--tw-text-opacity));
+}
+
 .text-custom-gray-500{
   --tw-text-opacity: 1;
   color: rgb(102 112 133 / var(--tw-text-opacity));
+}
+
+.profile__photo__background{
+  background: #F9FAFB;
 }
 
 .share__btn{
@@ -1011,13 +1018,33 @@ select{
   border: 1px dashed var(--gray-200);
 }
 
-.input__field{
+.form__field{
   padding: 10px 14px;
   width: 100%;
   background: #FFFFFF;
   border: 1px solid #D0D5DD;
   box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
   border-radius: 8px;
+}
+
+.form__field:focus{
+  border: 1px solid #84CAFF;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+}
+
+.form__field:invalid{
+  border: 1px solid #F89687;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+}
+
+.message__field:focus{
+  border: 1px solid #84CAFF;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #D1E9FF;
+}
+
+.message__field:focus:invalid{
+  border: 1px solid #F89687;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #FFD3CC;
 }
 
 .submit__btn{
@@ -1036,6 +1063,36 @@ select{
   font-weight: 700;
 }
 
+.submit__btn:hover{
+  background: #175CD3;
+  border: 1px solid #175CD3;
+}
+
+.submit__btn:disabled{
+  background: #B2DDFF;
+  border: 1px solid #B2DDFF;
+}
+
+.submit__btn:focus{
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #D1E9FF;
+}
+
+.checkbox__field{
+  background: #FFFFFF;
+  border: 1px solid #D0D5DD;
+  border-radius: 6px;
+}
+
+.checkbox__field:focus{
+  border: 1px solid #84CAFF;
+  box-shadow: 0px 0px 0px 4px #D1E9FF;
+}
+
+.checkbox__field:disabled{
+  background: #F2F4F7;
+  border: 1px solid #D0D5DD;
+}
+
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   --gray-900: #101828;
@@ -1051,6 +1108,10 @@ select{
 .hover\:bg-custom-gray-50:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+
+.focus\:border-\[5\.5px\]:focus{
+  border-width: 5.5px;
 }
 
 .focus\:border:focus{
@@ -1085,10 +1146,6 @@ select{
   display: block;
 }
 
-.group:hover .group-hover\:border-\[5\.5px\]{
-  border-width: 5.5px;
-}
-
 @media (min-width: 640px){
   .sm\:mt-9{
     margin-top: 2.25rem;
@@ -1100,16 +1157,8 @@ select{
     grid-column: span 1 / span 1;
   }
 
-  .md\:flex{
-    display: flex;
-  }
-
-  .md\:h-full{
-    height: 100%;
-  }
-
-  .md\:w-full{
-    width: 100%;
+  .md\:h-8{
+    height: 2rem;
   }
 
   .md\:flex-row{
@@ -1133,13 +1182,18 @@ select{
     padding-top: 3rem;
     padding-bottom: 3rem;
   }
+
+  .md\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .md\:leading-\[24px\]{
+    line-height: 24px;
+  }
 }
 
 @media (min-width: 1024px){
-  .lg\:col-span-1{
-    grid-column: span 1 / span 1;
-  }
-
   .lg\:px-\[112px\]{
     padding-left: 112px;
     padding-right: 112px;
